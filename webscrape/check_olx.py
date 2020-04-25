@@ -1,5 +1,4 @@
 import requests
-import os.path
 from bs4 import BeautifulSoup as soup
 
 
@@ -40,7 +39,6 @@ for url in urls:
 		page_html = requests.get(url)
 		page_soup = soup(page_html.text, "html.parser")
 		containers = page_soup.findAll("div",{"class":"offer-wrapper"})
-		contain = containers[0]
 	except TypeError:
 		print("Not possible" + url)
 	except:
@@ -53,7 +51,7 @@ for url in urls:
 			img = items[0].a.img["src"]
 			link = items[1].div.h3.a["href"]
 			price = items[2].div.p.strong.text
-			location = items[3].div.p.small.span.text 
+			location = items[3].div.p.small.span.text
 			product = Product(name,price,location,img,link)
 			products.append(product)
 		except TypeError:
