@@ -30,18 +30,15 @@ except TypeError:
 except:
     pass
 
-print(len(containers))
-
 for contain in containers:
     try:
         name = contain.find("span",{"class":"title"}).text
-        img = contain.img["src"]
-        print(img)
-        # link = items[1].div.h3.a["href"]
-        # price = items[2].div.p.strong.text
-        # location = items[3].div.p.small.span.text
-        # product = Product(name,price,location,img,link)
-        # products.append(product)
+        img = contain.img["src"]    # works for premium only
+        link = contain["href"]
+        price = contain.find("span", {"class":"price shadow"}).text[4:]
+        location = contain.find("span", {"class":"location"}).text
+        product = Product(name,price,location,img,link)
+        products.append(product)
     except TypeError:
         print("Not possible")
     except:
