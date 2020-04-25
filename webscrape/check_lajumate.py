@@ -51,5 +51,8 @@ while next_page == None:
     url = "https://lajumate.ro/anunturi_produse-alimentare_" + str(i) + ".html"
     i += 1
 
-for product in products:
-    print(product)
+filename = "products.csv"
+
+with open(filename, "a") as f:
+    for product in products:
+        f.write(product.name.replace(",",".") + "," + str(product.price).replace(",",".") + "," + product.location.replace(",",".") + "," + product.img + "," + product.link + "\n")
