@@ -2,6 +2,13 @@ import requests
 from bs4 import BeautifulSoup as soup
 
 
+filename = "products.csv"
+f = open(filename, "w")
+
+headers = "Name, Price, Location, Image, Link\n"
+
+f.write(headers)
+
 class Product:
 	def __init__(self, name, price, location, img, link):
 		self.name = name
@@ -60,4 +67,5 @@ for url in urls:
 			pass
 
 for product in products:
-		print(product)
+		f.write(product.name.replace(",","|") + "," + str(product.price).replace(",","|") + "," + product.location.replace(",","|") + "," + product.img.replace(",","|") + "," + product.link.replace(",","|") + "\n")
+
