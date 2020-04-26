@@ -15,4 +15,4 @@ Team reMarkable:
 * Alexandra Onose
 * Mihai Trandafirescu
 
-Open the FarmersNextToYou.html webpage and test our project. The database behind was created with custom webscrapping tools.
+Open the FarmersNextToYou.html webpage and test our project. The database behind was created with custom web scraping tools.
