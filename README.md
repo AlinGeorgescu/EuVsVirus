@@ -15,6 +15,10 @@ Team reMarkable:
 * Alexandra Onose
 * Mihai Trandafirescu
 
-Open the FarmersNextToYou.html webpage and test our project. The database behind was created with custom web scraping tools.
+Open the FarmersNextToYou.html webpage and test our project.
+
+The database behind was created with custom web scraping tools.
+
+The backend is located in the source folder.
 
 Pitch video: https://www.youtube.com/watch?v=rkHzHafxOkQ
