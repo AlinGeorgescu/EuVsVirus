@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <title>frontendlocal</title>
+  <meta name="generator" content="Google Web Designer 8.0.1.0401">
+  <style type="text/css">
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+      background-image: url("https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80");
+      background-size: cover;
+    }
+    body {
+      background-color: transparent;
+      transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+      transform-style: preserve-3d;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .topnav {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      background-color: rgb(41, 41, 41);
+      transform-style: preserve-3d;
+      transform: translate3d(0px, 1px, 0px);
+      text-align: center;
+    }
+    .i{
+      position: right;
+      height: 200%;
+      z-index:-1;
+      float: right;
+      display: block;
+      color: rgba(255, 255, 255, 0.308);
+      text-align: center;
+      
+    }
+    .topnav a {
+      float: left;
+      display: block;
+      color: rgba(255, 255, 255, 0.308);
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    .topnav a:hover {
+      background-color: rgb(221, 221, 221);
+      color: black;
+    }
+    .topnav a.active {
+      background-color: green;
+      color: white;
+    }
+    .topnav input[type="text"] {
+      margin-top: 8px;
+      font-size: 17px;
+      border: none;
+    }
+    .topnav .search-container button {
+      position: relative;
+      padding: 6px 10px;
+      margin-top: 8px;
+      margin-right: 16px;
+      background: rgb(221, 221, 221);
+      font-size: 17px;
+      border: none;
+      cursor: pointer;
+    }
+    .topnav .search-container button:hover {
+      background: rgba(20, 77, 13, 0.096);
+    }
+    .vertical-menu {
+      overflow-y: auto;
+      transform-style: preserve-3d;
+      height: 504px;
+      width: 730px;
+      transform-origin: 365px 252px 0px;
+      transform: translate3d(659px, 230px, 0px);
+    }
+    .vertical-menu a {
+      background-color: rgb(238, 238, 238);
+      color: black;
+      display: block;
+      padding: 12px;
+      text-decoration: none;
+    }
+    .vertical-menu a:hover {
+      background-color: rgb(204, 204, 204);
+    }
+    .vertical-menu a.active {
+      background-color: rgb(76, 175, 80);
+      color: white;
+    }
+    #myInput {
+      background-repeat: no-repeat;
+      font-size: 16px;
+      padding: 12px 20px 12px 40px;
+      border: 1px thin rgb(200, 200, 200);
+      margin-bottom: 12px;
+      transform-style: preserve-3d;
+      height: 44px;
+      width: 16.16%;
+      transform-origin: 167.018px 21.8px 0px;
+      transform: translate3d(336px, 302px, 0px);
+    }
+    #myTable {
+      
+      
+      font-size: 18px;
+      transform-style: preserve-3d;
+      width: 65.75%;
+      transform-origin: 679px 195.2px 0px;
+      transform: translate3d(338px, 302px, 0px);
+      
+    }
+    #myTable th {
+      color: whitesmoke;
+      border-bottom: 4px solid transparent;
+      text-align: left;
+      padding: 12px;
+      opacity: 1;
+      background-color: green;
+      
+    }
+    #myTable td {
+      text-align: left;
+      padding: 12px;
+      opacity: 0.91;
+      font-size: 120%;
+      background-color: white;
+    }
+    #myTable tr {
+      border-bottom: 1px solid rgb(200, 200, 200);
+      background-color: white;
+      opacity: 0.91;
+    }
+    #myTable tr:hover {
+      background-color: rgb(152, 251, 152);
+      opacity: 1;
+    }
+    #but {
+      font-size: 16px;
+      text-align: center;
+      border: 1px thin rgb(200, 200, 200);
+      margin-bottom: 12px;
+      transform-style: preserve-3d;
+      height: 44px;
+      width: 9.16%;
+      transform-origin: 167.018px 21.8px 0px;
+      transform: translate3d(336px, 302px, 0px);
+    }
+    #google_translate_element {
+      position: relative;
+    }
+    
+
+  </style>
+</head>
+
+<body class="htmlNoPages">
+  <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#about">About</a>
+    <div class="i">
+      <img src="https://cdn.discordapp.com/attachments/702192575209275495/703980054660644894/logo.png" width="80px" height="100%">
+    </div>
+  </div>
+  <input type="text" id="myInput" placeholder="Type in your product.." title="Type in a name">
+  <button id="but" class="gwd-button-1gq3" data-gwd-name="but" onclick="myFunction();getLocation()">Search</button>
+  <div id="google_translate_element"></div>
+  <!--<table id="myTable">
+    <tbody>
+      <tr class="header">
+        <th style="width: 50%;">Name</th>
+        <th style="width: 20%;">URL</th>
+      </tr>
+      <tr>
+        <td>Alfreds Futterkiste</td>
+        <td>Germany</td>
+      </tr>
+      <tr>
+        <td>Berglunds snabbkop</td>
+        <td>Sweden</td>
+      </tr>
+      <tr>
+        <td>Island Trading</td>
+        <td>UK</td>
+      </tr>
+      <tr>
+        <td>Koniglich Essen</td>
+        <td>Germany</td>
+      </tr>
+      <tr>
+        <td>Laughing Bacchus Winecellars</td>
+        <td>Canada</td>
+      </tr>
+      <tr>
+        <td>Magazzini Alimentari Riuniti</td>
+        <td>Italy</td>
+      </tr>
+      <tr>
+        <td>North/South</td>
+        <td>UK</td>
+      </tr>
+      <tr>
+        <td>Paris specialites</td>
+        <td>France</td>
+      </tr>
+    </tbody>
+  </table>-->
+  <!--<script>
+    var x = document.getElementById("demo");
+
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+    }
+  </script>-->
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'ro'
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <p id="demo"></p>
+  <script>
+    input = document.getElementById("myInput");
+    input.addEventListener("keyup", function(event) {
+      if (event.keyCode === 13) {
+        // Cancel the default action, if needed
+        document.getElementById("but").click();
+      }
+    });
+  </script>
+  <script>
+    var table;
+
+    function create_table() {
+
+      var xmlhttp = ""
+      var baseurl = "https://farmersnexttoyou20200425210451.azurewebsites.net/api/NewProducts/";
+
+      var api_url = 'https://api.opencagedata.com/geocode/v1/json'
+
+
+
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.open("GET", baseurl, true);
+      xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+          var persons = JSON.parse(xmlhttp.responseText);
+/*           for (i = 0; i < 5; i++) {
+            var apikey = '9552c3c683b94207af5800e9f697c6f0';
+            var city = persons[i].location;
+
+            var api_url = 'https://api.opencagedata.com/geocode/v1/json'
+
+            var request_url = api_url + '?' + 'key=' + apikey + '&q=' + encodeURIComponent(city) + '&pretty=1' + '&no_annotations=1';
+
+            // see full list of required and optional parameters:
+            // https://opencagedata.com/api#forward
+
+            var request = new XMLHttpRequest();
+            request.open('GET', request_url, true);
+
+            request.onload = function() {
+              // see full list of possible response codes:
+              // https://opencagedata.com/api#codes
+
+              if (request.status == 200) {
+                // Success!
+                var data = JSON.parse(request.responseText);
+                alert(data.results[0].geometry.lat + '  ' + data.results[0].geometry.lng);
+
+              } else if (request.status <= 500) {
+                // We reached our target server, but it returned an error
+
+                console.log("unable to geocode! Response code: " + request.status);
+                var data = JSON.parse(request.responseText);
+                console.log(data.status.message);
+              } else {
+                console.log("server error");
+              }
+            }; 
+
+            request.onerror = function() {
+              // There was a connection error of some sort
+              console.log("unable to connect to server");
+            };
+
+            request.send(); // make the request
+
+          }*/
+
+
+          // make the request
+
+
+
+          var tbltop = `<table id="myTable">
+                                <tr><th>Name</th><th>Price</th><th>Location</th><th>Image</th><th>Link</th><th>Id</th></tr>`;
+          //main table content we fill from data from the rest call
+
+          var main = "";
+          for (i = 0; i < persons.length; i++) {
+            main += "<tr><td>" + persons[i].name + "</td><td>" + persons[i].price + "</td><td>" + persons[i].location + "</td><td width: 80px>" + "<img src=" +
+              persons[i].image + " style=\"width: 200px; height: 150px; border: 3\"" + "></img > " + "</td > <td>" + "<a href=" + persons[i].link + "> link </a>" + "</td> <td>" + persons[i].id + "</td></tr>";
+          }
+          var tblbottom = "</table>";
+          var tbl = tbltop + main + tblbottom;
+          document.getElementById("personInfo").innerHTML = tbl;
+        }
+      };
+      xmlhttp.send();
+    }
+    window.onload = function() {
+      create_table();
+    }
+
+
+    function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        tr[i].style.display = "";
+
+      }
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+
+    }
+  </script>
+  <script>
+    var x = document.getElementById("demo");
+
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+    }
+  </script>
+  <div id="personInfo"> </div>
+  <div class="gwd-div-61k8 gwd-div-ictu"></div>
+</body>
+
+</html>
