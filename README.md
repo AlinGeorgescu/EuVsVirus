@@ -16,3 +16,5 @@ Team reMarkable:
 * Mihai Trandafirescu
 
 Open the FarmersNextToYou.html webpage and test our project. The database behind was created with custom web scraping tools.
+
+Pitch video: https://www.youtube.com/watch?v=rkHzHafxOkQ
