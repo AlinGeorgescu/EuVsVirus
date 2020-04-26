@@ -1,5 +1,5 @@
 # EuVsVirus
-EuVsVirus 2020 Project - Farmers next to you
+EuVsVirus 2020 Project - Farmers Next to You
 
 (C) Copyright 2020
 
